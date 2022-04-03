@@ -1,4 +1,4 @@
-# User-Agent（[中文翻译在这里](./README_zh_CN.md)）
+# User-Agent
 <p align="center">
   <a href="https://github.com/mssola/user_agent/actions/workflows/ci.yml" title="Travis CI status for the default branch"><img src="https://github.com/mssola/user_agent/actions/workflows/ci.yml/badge.svg" alt="Build Status for the default branch" /></a>
   <a href="http://godoc.org/github.com/mssola/user_agent" title="godoc.org page"><img src="https://godoc.org/github.com/mssola/user_agent?status.png" alt="godoc.org page" /></a>
@@ -7,7 +7,7 @@
 
 ---
 
-UserAgent is a Go library that parses HTTP User Agents. As an example:
+UserAgent 是一个用于解析 HTTP 用户代理的 Go 包，举个例子：
 
 ```go
 package main
@@ -19,9 +19,8 @@ import (
 )
 
 func main() {
-    // The "New" function will create a new UserAgent object and it will parse
-    // the given string. If you need to parse more strings, you can re-use
-    // this object and call: ua.Parse("another string")
+    // "New" 方法会创建一个 UserAgent 对象，将用来解析传入的字符串参数。
+    // 如果你想解析更多字符串，你可以重复这个对象或调用：ua.Parse("another string")
     ua := user_agent.New("Mozilla/5.0 (Linux; U; Android 2.3.7; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1")
 
     fmt.Printf("%v\n", ua.Mobile())   // => true
@@ -40,7 +39,7 @@ func main() {
     fmt.Printf("%v\n", name)          // => "Android"
     fmt.Printf("%v\n", version)       // => "4.0"
 
-    // Let's see an example with a bot.
+    // 让我们看看机器人的例子。
 
     ua.Parse("Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)")
 
@@ -52,25 +51,23 @@ func main() {
 }
 ```
 
-If you want to read the full API documentation simply check
-[godoc](http://godoc.org/github.com/mssola/user_agent).
+如果你想阅读整个 API 文档，可以从这里查看 [godoc](http://godoc.org/github.com/mssola/user_agent).
 
-## Installation
+## 安装
 
 ```
 go get -u github.com/mssola/user_agent
 ```
 
-## Contributing
+## 贡献
 
-Do you want to contribute with code, or to report an issue you are facing? Read
-the [CONTRIBUTING.md](./CONTRIBUTING.md) file.
+你想贡献代码或报告一个错误？可以阅读这里 [CONTRIBUTING.md](./CONTRIBUTING.md) file.
 
-## [Changelog](https://pbs.twimg.com/media/DJDYCcLXcAA_eIo?format=jpg&name=small)
+## [更新日志](https://pbs.twimg.com/media/DJDYCcLXcAA_eIo?format=jpg&name=small)
 
-Read the [CHANGELOG.md](./CHANGELOG.md) file.
+阅读这个文件 [CHANGELOG.md](./CHANGELOG.md)。
 
-## License
+## 开源协议
 
 ```
 Copyright (c) 2012-2021 Miquel Sabaté Solà
